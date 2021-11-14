@@ -6,12 +6,15 @@ from lib.selenium import Selenium
 from lib.utils import writeFile
 from constants import *
 
+
+from database.Mongo import Database
+
 selenium = Selenium()
 driver = selenium.driver
 
-def get_data(url):
+def get_data(products):
     try :
-        driver.get(url)
+        driver.get(products['url'])
         time.sleep(3)
         data = {}
 
@@ -28,7 +31,8 @@ def get_data(url):
         else:
             data['price'] = 'Indisponível'
 
-        data['url'] = url
+        data['id'] = products['id']
+        data['url'] = products['url']
 
         return data
     except Exception as e:
@@ -37,10 +41,19 @@ def get_data(url):
 
     
 def main():
-    result = list(map(get_data, URLS))
+    result = list(map(get_data, PRODUCTS))
     cleaned_data = list(filter(None, result))
-    data_str = json.dumps(cleaned_data)
-    writeFile(file_path='data.json', data=data_str)
+
+    db = Database()
+
+    for prod in cleaned_data:
+    
+        db.saveProduct(
+            _id=prod['id'],
+            product_name=prod['name'],
+            price=prod['price']
+        )
+
     driver.quit()
 
 main()
