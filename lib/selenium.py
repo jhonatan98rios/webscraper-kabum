@@ -11,7 +11,16 @@ class Selenium():
         self.chrome_options.add_argument('--headless')
         self.chrome_options.add_argument('--no-sandbox')
         self.chrome_options.add_argument('--disable-dev-shm-usage')
+
+        self.driver = webdriver.Chrome(
+            chrome_options=self.chrome_options, 
+            service=Service(ChromeDriverManager().install())
+        )
     
-    def get_driver(self):
-        s=Service(ChromeDriverManager().install())
-        return webdriver.Chrome(chrome_options=self.chrome_options, service=s)
+
+    def query(self, xpath):
+        try:
+            data = self.driver.find_element_by_xpath(xpath)
+            return data
+        except Exception as e:
+            return None

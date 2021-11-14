@@ -2,7 +2,7 @@ URLS = [
     "https://www.kabum.com.br/produto/222352/notebook-samsung-galaxy-book-go-snapdragon-7c-4gb-128gb-ssd-windows-10-home-14-prata-np340xla-k03br",
     "https://www.kabum.com.br/produto/196061/notebook-positivo-motion-i34128gb-intel-core-i3-6157u-4gb-128gb-ssd-windows-10-home-14-hd-cinza-3011902",
     "https://www.kabum.com.br/produto/153774/notebook-ultra-intel-core-i5-5257u-8gb-1tb-hdd-15-6-windows-10-prata-ub521",
-    "https://www.kabum.com.br/produto/179446/notebook-lenovo-ultrafino-ideapad-s145-ryzen-5-3500u-8gb-256gb-ssd-m-2-nvm4e-15-6-dolby-audio-windows-10-home-prata-81v70008br",
+    "https://www.kabum.com.br/produto/149914/notebook-asus-amd-ryzen-5-3500u-8gb-256gb-ssd-15-6-full-hd-windows-10-home-cinza-m515da-ej502t?gclid=Cj0KCQiA4b2MBhD2ARIsAIrcB-R7WI6hF6LtOnO0kNZxkjhJjwi5K6mFDusVurFSor14VdeiHqM86jUaAhqiEALw_wcB"
     "https://www.kabum.com.br/produto/184928/notebook-acer-aspire-3-intel-core-i3-1005g1-8gb-ram-2x4gb-ssd-512gb-15-6-full-hd-windows-10-cinza-a315-56-304q",
     "https://www.kabum.com.br/produto/156935/notebook-lenovo-ideapad-3i-intel-core-i5-10210u-uhd-graphics-8gb-ram-256gb-ssd-15-6-windows-10-prata-82bs0005br",
     "https://www.kabum.com.br/produto/156098/notebook-acer-aspire-3-amd-ryzen-5-3500u-8gb-256gb-ssd-15-6hd-1366x768-windows-10-home-preto-a315-23-r6m7",
