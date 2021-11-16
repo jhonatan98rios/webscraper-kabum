@@ -1,8 +1,12 @@
 from pymongo import MongoClient
+from dotenv import dotenv_values
 
+config = dotenv_values(".env")  
+
+mongo_key = config["MONGO_KEY"]
 class Database:
     def __init__(self) -> None:
-        self.client = MongoClient("mongodb://jhonatan98rios:maiarios@cluster0-shard-00-00.t0gwi.gcp.mongodb.net:27017/&ssl=true&ssl_cert_reqs=CERT_NONE")
+        self.client = MongoClient(mongo_key)
         self.db = self.client['SmartGadget']
         self.collection = self.db['KabumScrape']
         

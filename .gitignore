@@ -1,3 +1,7 @@
 __pycache__/
 lib/__pycache__/
 database/credentials.py
+database/.env
+.gitignore
+database/Mongo.py
+.env
